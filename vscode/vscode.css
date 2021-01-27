@@ -1,0 +1,333 @@
+/* {Custom CSS and JS Loader} */
+
+/* {Customize UI} reduces all font sizes. Use this setting to offset it. */
+/* TODO Already fixed? */
+/* body { font-size: 80%; } */
+
+/* TODO */
+/* (or its child) */
+/* .monaco-quick-open-widget, .quick-input-widget */
+
+/* Issues ------------------------------------- */
+
+/* [Text rendering issues](https://github.com/microsoft/vscode/labels/lcd-text-rendering) */
+
+/* [Alternative locations for the outline view #49923
+](https://github.com/microsoft/vscode/issues/49923) */
+
+/* Editor ------------------------------------- */
+
+/* editor_tab */
+.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab {
+    font-family: 'Fira Code';
+}
+/* editor_tab_font */
+.monaco-workbench .part.editor > .content .editor-group-container > .title .title-label a, .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab .tab-label a {
+    font-size: 14px !important;  /* 'window.zoomLevel: 1, font-size: 11px' */
+}
+
+/* Git diff ----------------------------------- */
+
+/* git__inserted_text_bg: changed codes of theme key `diffEditor.insertedTextBackground`*/
+.cdr.char-insert {
+    background: hsla(213, 26%, 61%, 0.26)
+}
+/* git__removed_text_bg: changed codes of theme key `diffEditor.removedTextBackground` */
+span.mtk1.char-delete {
+    background: hsla(354, 100%, 82%, 0.164)
+}
+
+/* Panel -------------------------------------- */
+
+/* https://github.com/Microsoft/vscode/issues/46403#issuecomment-411604090 */
+
+/* panel_title_bar */
+/* TODO Verify with previous commit chg that it's successfully hidden */
+.monaco-workbench .part.panel .composite.title {
+	display: none !important;
+}
+/* panel_margin_top backup for workaround of 'extra Tmux pane' */
+/* .monaco-workbench .pane-body.integrated-terminal {
+    margin-top: -35px;
+} */
+/* pane_header */
+.pane-header {
+    background-color: transparent !important;
+    color: #6E7C96;
+}
+
+/* panel_whitespace */
+.split-view-view.visible {
+  background-color: #282C35;
+}
+
+/* workbench_ex_panel */
+/* .monaco-workbench .part */
+
+/* panel */
+/* .monaco-workbench .part.panel */
+
+/* terminal */
+/* .monaco-workbench .part>.content>.composite {    bottom: 101px !important;    } */
+
+/* Sidebar ------------------------------------ */
+
+/* [VS Code CSS addition to increase readability on file tree.](https://gist.github.com/samdenty/b96f4df576d05cb123248f8ebfa899b6)  */
+
+/* NOTE Changed from `.monaco-panel-view` to `monaco-pane-view`. VSCode hasn't been changed */
+.monaco-pane-view {
+
+    font-family: 'Fira Code';
+    /* font-family: 'Consolas';  */
+
+    /* prev doesn't have this element */
+    /* font-size: 115%;  */
+}
+
+/* Widget ------------------------------------- */
+
+/* search_input_text */
+textarea.input,
+/* settings_input_text */
+.mtk1,
+/* keybindings_input_text */
+input.input {
+
+    font-size: 16px !important;
+    font-family: 'Fira Code' !important;
+}
+
+/* quick_open_widget, quick_input_widget */
+.monaco-quick-open-widget, .quick-input-widget {
+    font-family: 'Fira Code';
+/*     margin: 50px !important; */
+}
+
+/* reference_zone_widget__reference_tree (to exclude styling others e.g. settings UI styled by `.monaco-list-rows` ) */
+.monaco-editor .reference-zone-widget .ref-tree {
+    font-family: 'Fira Code';
+    font-size: 75%;
+}
+
+/* quick_open_widget_items */
+/* TODO quick_input_widget_items */
+.monaco-tree-row {
+    margin-bottom: 4px;
+}
+
+/* quick_input_titlebar */
+.quick-input-titlebar {
+    background-color: #282C35 !important;
+    color: #8299B6;
+}
+
+/* quick_input_widget_show_file_icons */
+.quick-input-widget.show-file-icons {
+    box-shadow: 5px 5px #1e2026;
+    box-shadow: 5px 5px 5px #1e2026 !important;
+}
+
+/* .monaco-tree-row.has-children {
+    margin: 7px;
+}
+
+/* Rmd ---------------------------------------- */
+
+/* NOTE Define scope in theme files to differentiate it from similar markups, The scope is from VSCode settings: "file.associations": {"*.rmd": "markdown"}. Theme is same as RStuiod's, except that font weight of bold isn't required as it's defined in the scope.
+    {
+        "scope": "markup.heading.markdown",
+        "settings": {
+            "fontStyle": "bold"
+    }
+*/
+/* Rmd heading, ???, R heading */
+span.mtk3.mtkb, span.mtk6.mtkb, .mtk19 {
+    color: #c7c7bf;
+    /* color: #8299B6; */
+/*     font-weight: bold; */
+    font-style: italic;
+    font-family: Consolas;
+    /* font-size: 145%; */
+    font-size: 165%
+}
+
+/* Statusbar --------------------------------- */
+
+/* nvim_statusbar */
+[id="asvetliakov.vscode-neovim"] {
+    font-family: 'Fira Code';
+    color: #dadad4;
+    /* Fix width. Default val is 40vw. */
+    max-width: none !important;
+}
+/* activeFileInStatusBar_statusbar TODO Not working */
+[id="roscop.activefileinstatusbar"] {
+    font-family: 'Fira Code';
+    color: #dadad4;
+}
+/* editorSelection_statusbar */
+[id="status.editor.selection"] {
+    font-family: 'Fira Code';
+    color: #DCE5EC;
+}
+/* scm_statusbar */
+[id="status.scm"] {
+    color: #DCE5EC;
+}
+/* customCSSandJS_statusbar */
+[id="be5invis.vscode-custom-css"] {
+    display: none !important;
+}
+
+/* Backup - Vim*/
+
+/* vim_statusbar */
+/* [id="vscodevim.vim"] {
+    color: #B2E3E5;
+    position: absolute;
+    left: 350px;
+} */
+
+/* vim_statusbar_right_item */
+/* left: prev 450px */
+/* [class="statusbar-item right first-visible-item"] {
+    position: absolute;
+    left: 550px;
+} */
+/* unused_item_codicon */
+/* Remove it for 'vim_statusbar_right_item to show next to left item of  vim_statusbar */
+/* [class="codicon codicon-paintcan"] {
+    display: none !important;
+} */
+
+/* Editor actions ------------------------- */
+
+/* .editor-actions {
+  display: none
+} */
+/* To Disable by item */
+/* [title="Open Changes"] {
+  display: none !important;
+} */
+[title="Open Changes"] {
+    display: none !important;
+}
+[title="Run Code (Ctrl+Alt+N)"] {
+    display: none !important;
+}
+[title="Open Changes with Previous Revision (Ctrl+Shift+G ,)"] {
+    display: none !important;
+}
+[title="Show Revision Details"] {
+    display: none !important;
+}
+[title="Open Changes with Next Revision (Ctrl+Shift+G .)"] {
+    display: none !important;
+}
+[title="Toggle File Blame Annotations (Ctrl+Shift+G B)"] {
+    display: none !important;
+}
+[title="Split Editor Right (Ctrl+\\)"] {
+    display: none !important;
+}
+
+/* {R LSP Client} ----------------------------- */
+
+span.mtk5.detected-link {
+    /* text-decoration: none; */
+    /* text-decoration: underline; */
+    text-decoration-color: #434C5F /* #6E7C98 */
+}
+
+/* SCM */
+
+/* scm_inputbox_text */
+.scm-viewlet .scm-editor-container .mtk1 {
+    font-size: 16px !important;
+    font-family: 'Fira Code';
+}
+
+/* Codeicon ----------------------------------- */
+
+/* [{microsoft/vscode-codicons}](https://github.com/microsoft/vscode-codicons) */
+/* [codicon](https://microsoft.github.io/vscode-codicons/dist/codicon.html) */
+/* [codicon.csv](https://gist.github.com/misolori/55f94b44ad044f625b3ba114b7e209ea) */
+
+/* codicon_outline_symbol_event for R {languageserver} section symbols `# my_section ---- */
+.codicon-symbol-event:before {
+    content: "\ea71"; /* eb8a */
+    color: #434C5D;
+}
+/* codicon_fold_button */
+.codicon-chevron-right:before,
+.codicon-chevron-down:before {
+    color: #6E7C96;
+}
+
+/* Others ------------------------------------- */
+
+/* find_in_files_match */
+.monaco-workbench .search-view .findInFileMatch {
+    background: none;
+    color: #E6DB7F;
+}
+
+/* {Customize UI} --------------------------------------- */
+
+/* NOTE only for VSCode */
+/* TODO Already fixed? */
+/* .monaco-action-bar .action-label.octicon,
+.monaco-workbench .activitybar > .content .monaco-action-bar .action-label {
+    font-size: 25px !important;
+} */
+
+/* _ Refactor all font sizes -------------------- */
+
+/* ___ Tab -------------------------------------- */
+
+/* tab_bar_left */
+/* .tab.close-button-right.sizing-fit.has-icon-theme.tab-border-bottom {
+
+} */
+/* tab_bar_right */
+/* .tabs-and-actions-container {
+
+} */
+
+/* Backup ------------------------------------- */
+
+/* .monaco-panel-view, .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container, .monaco-breadcrumbs, .monaco-tree-row {
+    font-size: 120%;
+} */
+
+
+
+/* TODO ------------------------------------------ */
+
+/* suggest-widget size */
+/* .monaco-editor .suggest-widget.docs-side {
+  width: 1000px;
+}
+.monaco-editor .suggest-widget.docs-side > .details {
+  width: 60%;
+  max-height: 800px !important;
+}
+.monaco-editor .suggest-widget.docs-side > .tree {
+  width: 30%;
+  float: left;
+} */
+
+/* parameter-hints-widget */
+.editor-widget.parameter-hints-widget.visible {
+  max-height: 800px !important;
+}
+.monaco-editor .parameter-hints-widget > .wrapper {
+  max-width: 1000px;
+}
+
+/* editor-hover TODO */
+.monaco-editor-hover .monaco-editor-hover-content,
+.monaco-editor .monaco-hover {
+  max-height: 100000000px !important;
+  max-width: 100000000px !important;
+}
