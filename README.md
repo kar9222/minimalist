@@ -29,9 +29,9 @@ NOTE
 
 # Gallery
 
-![setup_transparency](others/setup_transparent.png)
+![setup_transparency](others/setup_transparent_2.png)
 
-![setup](others/setup.png)
+![setup](others/setup_2.png)
 
 
 # VSCode theme
@@ -125,7 +125,7 @@ Theme & productivity tools. NOTE I pin the {radian} version at `pip install -I r
 <details>
 <summary>FZF + R history search</summary>
 <br>
-Call [FZF](https://github.com/junegunn/fzf) for interactive R history search. Great for single-line history search and can be used together with native {radian} REPL's `alt+r` multi-line history search.
+Call [FZF](https://github.com/junegunn/fzf) for interactive R history search. Great for single-line history search and can be used together with native {radian} REPL's `ctrl+r` multi-line history search.
 
 1. Put this in e.g. `~/bin/r_history` then `chmod +x ~/bin/r_history`
 2. Call FZF in Tmux for running this script
@@ -160,9 +160,9 @@ bind -n MY_KEYBINDING run " \
 
 ## {radian} autocompletion & theme
 
-Autocompletion: Type some character, press right arrow or other keybindings for completion.
+Autocompletion: Type some character, press `right arrow` or other keybindings for completion. NOTE In the GIF below, I use `alt+l` key autocompletion keybindings.
 
-Theme: See image above
+Theme: See image above and in your ~/.radian_profile, simply put `options(radian.color_scheme = "monokai")`.
 
 
 <details>
@@ -198,6 +198,7 @@ sudo ln -sf $repl/prompt_toolkit/styles/defaults.py $site_packages/lineedit/deps
 <br>
 
 ![autocompletion](others/autocompletion.gif)
+![autocompletion3](others/autocompletion3.gif)
 
 
 
