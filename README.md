@@ -11,7 +11,7 @@ My _minimalist_ setup for theme & some of my productivity tools for
 - Julia REPL
 - {theme} for R packages: {ggplot2}, {plotly}, {shiny}, {rmarkdown}, {ggdist}, {ggdag}, etc
 
-_Minimalistic_ style. All colors are _chosen & hand tuned manually_
+_Minimalistic_ style. All colors are _chosen & hand tuned manually with love_
 - Dark background
 - 3 light colors: matching colors and good contrast for plots
 - Dark colors for everything else e.g. comments, operators, brackets, quotes
@@ -120,6 +120,8 @@ ln -sf vscode_r/r.json $vsc/$vsc_r/syntax/r.json
 
 Theme & productivity tools. NOTE I pin the {radian} version at `pip install -I radian==0.4.7`
 
+## FZF & R history search
+
 <details>
 <summary>FZF + R history search</summary>
 <br>
@@ -156,10 +158,15 @@ bind -n MY_KEYBINDING run " \
 
 ![FZF + R history search](others/fzf_r_history.gif)
 
-## {radian} theme
+## {radian} autocompletion & theme
+
+Autocompletion: Type some character, press right arrow or other keybindings for completion.
+
+Theme: See image above
+
 
 <details>
-<summary>{radian} theme</summary>
+<summary>Autocomplete & theme</summary>
 
 ```bash
 # R REPL {radian} --------------------------------
@@ -189,6 +196,8 @@ sudo ln -sf $repl/prompt_toolkit/styles/defaults.py $site_packages/lineedit/deps
 
 </details>
 <br>
+
+![autocompletion](others/autocompletion.gif)
 
 
 
