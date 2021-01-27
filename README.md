@@ -140,7 +140,7 @@ Call [FZF](https://github.com/junegunn/fzf) for interactive R history search. Gr
 tac ~/.radian_history                    | \
     awk '!a[$0]++'                       | \
     sed -e '/^#/d  ;  /^$/d  ;  s/^+//g' | \
-    FZF --exact --no-sort
+    fzf --exact --no-sort
 ```
 
 ~/.tmux.conf
@@ -236,3 +236,9 @@ Theme for [{vim-sneak}](https://github.com/justinmk/vim-sneak) & [{vim-easymotio
 # Tmux
 
 Theme for status bar, pane, window and search bar. See image above and [.tmux.conf](https://github.com/kar9222/minimalist/blob/main/tmux/.tmux.conf)
+
+# TODO
+
+Update README for
+- FZF + ripgrep setup in VSCode
+- FZF + fd setup in VSCode
