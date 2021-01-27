@@ -204,7 +204,16 @@ sudo ln -sf $repl/prompt_toolkit/styles/defaults.py $site_packages/lineedit/deps
 
 # R theme package
 
-{theme} for R packages: {ggplot2}, {plotly}, {shiny}, {rmarkdown}, {ggdist}, {ggdag}, etc. See [{theme}](https://github.com/kar9222/theme)
+{theme} for R packages: {ggplot2}, {plotly}, {shiny}, {rmarkdown}, {ggdist}, {ggdag}, etc.
+
+See [{theme}](https://github.com/kar9222/theme)
+
+
+# Custom {skimr} summary stats
+
+See [Custom {skimr} summary stats](https://gist.github.com/kar9222/c9c0c55d01ce88bbc3a96981e71b7cae)
+
+![skimr](others/skimr.png)
 
 
 # Julia
