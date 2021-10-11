@@ -1,6 +1,8 @@
 # README
 
-_NOTE Draft only...many TODOs._
+I am back to Neovim, see [kar9222/nvim](https://github.com/kar9222/nvim). Although I still use some of the stuffs here (e.g. REPL, theme), this repo won't be updated. But feel free to use them.
+
+<hr>
 
 My _minimalist_ setup for theme & some of my productivity tools for
 - VSCode
